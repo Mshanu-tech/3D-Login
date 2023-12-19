@@ -1,0 +1,90 @@
+/* styles.css */
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    background: linear-gradient(to bottom, #001c39, #0768a9);
+}
+
+.main {
+    width: 434px;
+    height: 446px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+}
+.photo {
+    /* position: absolute; */
+    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQDs4_Ax5n1qWcYswFyxuZ16o4h1oKu75nYgg&usqp=CAU');
+    width: 50px;
+    height: 50px;
+    background-size: cover; /* Maintain aspect ratio */
+    top: 10px; /* Adjust as needed */
+    left: 10px; /* Adjust as needed */
+    border-radius: 5px; Optional: Add border-radius for rounded corners
+}
+.card {
+    width: 234px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    transform-style: preserve-3d;
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.photo{
+    position: absolute;
+    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQDs4_Ax5n1qWcYswFyxuZ16o4h1oKu75nYgg&usqp=CAU');
+    width: 50px;
+}
+
+.elements.name,
+.photo,
+.elements.content {
+    transform: translateZ(50px); /*card rotate*/
+    text-align: center;
+}
+
+.rotate-text {
+    margin-bottom: 20px;
+    color: #ffffff;
+}
+
+.elements.content input,
+.elements.content button {
+    margin-bottom: 15px;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid #ffffff;
+    border-radius: 5px;
+    font-size: 16px;
+    color: #ffffff;
+}
+
+.elements.content input::placeholder {
+    color: #ffffff; 
+}
+
+button {
+    background-color: #4caf50;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+.card:hover {
+    /* transform: rotate3d(20deg); */
+    transform: rotateX(20deg) rotateY(20deg) ; 
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
